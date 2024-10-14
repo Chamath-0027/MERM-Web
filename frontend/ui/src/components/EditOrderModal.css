@@ -1,0 +1,129 @@
+/* Modal Overlay for background dimming */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 600px; /* Adjusted to be wider for two columns */
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  position: relative;
+  z-index: 1001;
+}
+
+/* Heading Styling */
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+/* Two-column Layout for Form Fields */
+.modal-content form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  column-gap: 20px; /* Space between columns */
+  row-gap: 15px; /* Space between rows */
+}
+
+/* Full width fields that span both columns */
+.modal-content form div.full-width {
+  grid-column: span 2; /* Span across both columns */
+}
+
+.modal-content label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Input fields */
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="date"],
+.modal-content input[type="time"],
+.modal-content input[type="number"],
+.modal-content select {
+  width: 100%; /* Full width of the grid cell */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+.modal-content button[type="submit"],
+.modal-content button[type="button"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Save Changes button */
+.modal-content button[type="submit"] {
+  background-color: #47b94b;
+  color: white;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Cancel button */
+.modal-content button[type="button"] {
+  background-color: #ccc;
+  color: black;
+}
+
+.modal-content button[type="button"]:hover {
+  background-color: #999;
+}
+
+/* Buttons row spans across both columns */
+.modal-content .buttons {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%; /* Expand width on mobile */
+    padding: 15px;
+  }
+
+  .modal-content form {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .modal-content .buttons {
+    grid-column: 1;
+  }
+}

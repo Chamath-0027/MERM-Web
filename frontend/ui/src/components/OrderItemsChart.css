@@ -1,0 +1,33 @@
+/* Container for the chart */
+.order-items-chart-container {
+    width: 50%; /* Take up half of the page width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #e8f5e9; /* Light green background */
+    border-radius: 8px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    border: 1px solid #c8e6c9; /* Light green border */
+  }
+  
+  /* Heading style */
+  .order-items-chart-container h2 {
+    text-align: center;
+    color: #388e3c; /* Dark green for the heading */
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  /* Chart itself */
+  .chart {
+    width: 100%; /* Ensure the chart fills the container width */
+    height: 400px; /* Set a fixed height for better display */
+  }
+  
+  /* Make the chart responsive */
+  @media (max-width: 768px) {
+    .order-items-chart-container {
+      width: 90%; /* Adjust the container width on smaller screens */
+    }
+  }
+  

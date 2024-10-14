@@ -1,0 +1,103 @@
+/* Navbar.css */
+.navbar {
+  background: linear-gradient(to right, #38EF7D, #11998E); /* Updated gradient background */
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #c6f2d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between; /* Ensures even spacing between logo, search bar, and links */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  color: #46bd6e;
+  font-size: 1.8rem; /* Adjusted font size */
+  font-weight: bold;
+  margin: 0; /* Ensures no extra spacing around text */
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Needed for button positioning */
+}
+
+.search-bar input {
+  width: 100%; /* Make it 100% to better align with the container */
+  max-width: 500px; /* Ensures the search bar doesn’t stretch too much */
+  padding: 0.75rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  position: absolute; /* Changed to absolute to align with the input */
+  right: 15px; /* Adjust the button's position */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: #f5f9f7;
+  
+}
+
+.search-bar button i {
+  color: #101110;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #52b733; /* Matches button hover color */
+  text-decoration: underline;
+}
+
+/* Button styles if needed */
+.btn-outline-success {
+  color: #52b733;
+  border: 1px solid #52b733;
+}
+
+.btn-outline-success:hover {
+  background-color: #52b733;
+  color: white;
+}

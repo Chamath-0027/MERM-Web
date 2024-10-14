@@ -1,0 +1,149 @@
+/* Orderform.css */
+.order-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f0f9f1; /* light green background */
+  border: 2px solid #34a853; /* darker green border */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-form {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to create two columns */
+  gap: 20px; /* Add space between fields */
+}
+
+.form-field {
+  flex: 1 1 calc(50% - 20px); /* Make each field take 50% of the width minus the gap */
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 1.1rem;
+  color: #34a853; /* dark green */
+  margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #34a853;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  transition: border-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #0b6623; /* darker green on focus */
+  outline: none;
+}
+
+.error-text {
+  color: #ff4d4d; /* red for error messages */
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  background-color: #34a853; /* main green color */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0b6623; /* darker green on hover */
+}
+
+.submit-btn:disabled {
+  background-color: #a8d5ac;
+  cursor: not-allowed;
+}
+
+.success-message {
+  color: #34a853; /* green for success messages */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: #ff4d4d; /* red for general error messages */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+  color: #34a853;
+}
+
+.popup p {
+  font-size: 1rem;
+  color: #000;
+}
+
+.close-popup-btn,
+.generate-pdf-btn {
+  background-color: #34a853; /* green button */
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-popup-btn:hover,
+.generate-pdf-btn:hover {
+  background-color: #0b6623; /* darker green on hover */
+}
+
+#order-summary p {
+  text-align: left;
+  margin: 5px 0;
+}
+
+#order-summary p strong {
+  color: #34a853;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .form-field {
+    flex: 1 1 100%; /* Stack fields on smaller screens */
+  }
+}
